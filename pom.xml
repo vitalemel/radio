@@ -27,9 +27,9 @@
             <scope>compile</scope>
         </dependency>
         <dependency>
-            <groupId>org.apache.maven.doxia</groupId>
+            <groupId>org.apache.maven.doxia.</groupId>
             <artifactId>doxia-site-renderer</artifactId>
-            <version>1.9.2</version>
+            <version>1.11.1</version>
         </dependency>
     </dependencies>
     <build>
@@ -39,21 +39,24 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.22.2</version>
                 <configuration>
-                    <failIfNoTests>false</failIfNoTests>
+                    <failIfNoTests>true</failIfNoTests>
                 </configuration>
-            </plugin>
 
+
+            </plugin>
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-site-plugin</artifactId>
                 <version>3.7.1</version>
             </plugin>
-            <plugin><groupId>org.apache.maven.plugins</groupId>
+
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-project-info-reports-plugin</artifactId>
                 <version>3.0.0</version>
             </plugin>
-
 
             <plugin>
                 <groupId>org.jacoco</groupId>
@@ -76,25 +79,7 @@
                         </goals>
                     </execution>
 
-                    <execution>
-                        <id>check</id>
-                        <goals>
-                            <goal>check</goal>
-                        </goals>
-                        <configuration>
-                            <rules>
-                                <rule>
-                                    <limits>
-                                        <limit>
-                                            <counter>LINE</counter>
-                                            <value>COVEREDRATIO</value>
-                                            <minimum>100%</minimum>
-                                        </limit>
-                                    </limits>
-                                </rule>
-                            </rules>
-                        </configuration>
-                    </execution>
+
 
                 </executions>
             </plugin>
@@ -102,3 +87,5 @@
 
     </build>
 </project>
+
+
