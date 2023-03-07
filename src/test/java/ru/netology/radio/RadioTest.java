@@ -1,4 +1,7 @@
-import org.junit.Test;
+package ru.netology.radio;
+
+import org.testng.annotations.Test;
+
 import org.junit.jupiter.api.Assertions;
 
 public class RadioTest {
